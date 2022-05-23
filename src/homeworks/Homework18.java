@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class Homework18 {
     //////////////////////////////////TASK-1//////////////////////////////////
     public static String noSpace(String str) {
+
         return str.replace(" ", "");
     }
 
