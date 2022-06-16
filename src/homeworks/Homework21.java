@@ -79,6 +79,6 @@ public class Homework21 {
         System.out.println(fizzBuzz2(15));
         System.out.println(findSumNumbers("ab110 c045d%"));
         System.out.println(findBiggestNumber("avs#$"));
-        System.out.println(countSequenceOfCharacters("aaAAa"));
+        System.out.println(countSequenceOfCharacters("aaAAa "));
     }
 }
