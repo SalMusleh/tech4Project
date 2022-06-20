@@ -57,31 +57,26 @@ public class Homework22 {
     }
     //////////////////////////////////TASK-4//////////////////////////////////
     public static boolean isPowerOf3(int number) {
-        /*
-        if(number == 1 || number % 3 == 0) return true;
-        return false;
-         */
-        return number == 1 || number % 3 == 0;
+        if (number < 1) {
+            return false;
+        }
+        while (number % 3 == 0) {
+            number /= 3;
+        }
+        return number == 1;
     }
 
     //////////////////////////////////TASK-5//////////////////////////////////
     public static int firstDuplicate(int[] arr) {
-        if (arr.length <= 1) return -1;
-        else {
-            List<Integer> list = new ArrayList<>();
-            for (Integer a : arr) {
-                list.add(a);
-            }
-            List<Integer> duplicates = new ArrayList<>();
-            for (int i = 0; i < list.size(); i++) {
-                for (int j = 1; j < list.size(); j++) {
-                    if (list.get(i) == list.get(j))
-                        duplicates.add(list.get(i));
-                }
-                Collections.sort(duplicates);
-            }
-            return duplicates.get(duplicates.size() - 1);
+        int result = 0;
+        if (arr.length == 0) return -1;
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] == arr[i + 1]) {
+                result = arr[i];
+                break;
+            } else result = -1;
         }
+        return result;
     }
 
     public static void main(String[] args) {
